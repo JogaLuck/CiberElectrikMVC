@@ -361,3 +361,19 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Archivos de respaldo de base de datos
+*.bak
+*.sql
+
+# Archivos de configuración por entorno (en caso de migrar a Core en el futuro)
+appsettings.*.json
+
+# Archivos de log y temporales adicionales
+*.tmp
+*.csv
+*.log
+
+# Evitar accidentalmente ignorar estos archivos necesarios en WebForms/MVC
+!Web.Debug.config
+!Web.Release.config
