@@ -43,6 +43,20 @@
         max-width: 450px;
         margin: 20px auto 0;
     }
+
+    /* Detecta el link de Somee y lo reposiciona */
+    a[href*="somee.com"] {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 9999;
+        padding: 5px;
+        font-size: 12px;
+        background-color: #f9f9f9;
+    }
+
 </style>
 
 <!-- Tarjeta de login centrada -->
@@ -51,13 +65,13 @@
     <form class="needs-validation" novalidate method="post" action="@Url.Action("Index", "Inicio")">
         <div class="mb-3">
             <label for="txtUsu" class="form-label">Usuario:</label>
-            <input type="text" class="form-control w-100" id="txtUsu" name="usuario" placeholder="Ingresa un usuario" required>
+            <input type="text" class="form-control w-100" id="txtUsu" name="usuario" placeholder="User: admin" required>
             <div class="invalid-feedback">Se requiere ingresar un usuario</div>
         </div>
 
         <div class="mb-3">
             <label for="txtCla" class="form-label">Clave:</label>
-            <input type="password" class="form-control w-100" id="txtCla" name="clave" placeholder="Ingresa una clave" required>
+            <input type="password" class="form-control w-100" id="txtCla" name="clave" placeholder="Password: admin" required>
             <div class="invalid-feedback">Se requiere ingresar una clave</div>
         </div>
 
