@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - CiberElectrik Systems</title>
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #f0f8ff, #e6f0ff, #f9f9ff);
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        main .card {
+            background-color: #ffffffcc;
+            backdrop-filter: blur(8px);
+            border-radius: 1rem;
+        }
+
+        a {
+            color: #0077cc;
+        }
+
+            a:hover {
+                color: #005fa3;
+                text-decoration: none;
+            }
+
+        .sidebar {
+            width: 220px;
+            background-color: #343a40;
+            color: white;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+            .sidebar a {
+                display: block;
+                color: #adb5bd;
+                padding: 10px 20px;
+                text-decoration: none;
+            }
+
+                .sidebar a:hover {
+                    background-color: #495057;
+                    color: white;
+                }
+
+        .main-content {
+            margin-left: 220px;
+            width: calc(100% - 220px);
+            padding: 20px;
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f8f9fa00;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .navbar-brand img {
+            height: 32px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="@Url.Action("Index", "Home")">🏠 Inicio</a>
+        <a href="@Url.Action("Index", "Categoria")">📁 Categorías</a>
+        <a href="@Url.Action("Index", "Marca")">🏷️ Marcas</a>
+        <a href="@Url.Action("Index", "Producto")">📦 Productos</a>
+        <a href="@Url.Action("Index", "Cliente")">👥 Clientes</a>
+        <a href="@Url.Action("Index", "Empleado")">👨‍💼 Empleados</a>
+        <a href="@Url.Action("Index", "TicketPedido")">🧾 TicketPedido</a>
+        <a href="@Url.Action("Index", "DetalleTicketPedido")">🧩 DetallesTicketPedido</a>
+        <a href="@Url.Action("About", "Home")">📚 Acerca de</a>
+        <a href="@Url.Action("Contact", "Home")">📨 Contacto</a>
+    </div>
+
+    <div class="main-content">
+        <nav class="navbar navbar-expand-lg navbar-white bg-white shadow-sm rounded">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="@Url.Action("Index", "Home")">
+                    <img src="~/favicon.ico" alt="Logo" /> CiberElectrik
+                </a>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            @RenderBody()
+            <footer>
+                <p>&copy; @DateTime.Now.Year - CiberElectrik Systems</p>
+                <p>Dirección: Av. Innovación Tecnológica 123, Lima, Perú</p>
+                <p>Email: <a href="mailto:contacto@ciberelectrik.com">contacto@ciberelectrik.com</a> | Teléfono: +51 1 555-0123</p>
+                <p>
+                    Síguenos en:
+                    <a href="#">Facebook</a> ·
+                    <a href="#">Twitter</a> ·
+                    <a href="#">LinkedIn</a>
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

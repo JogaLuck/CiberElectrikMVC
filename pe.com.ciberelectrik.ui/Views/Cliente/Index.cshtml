@@ -1,0 +1,93 @@
+﻿@model IEnumerable<pe.com.ciberelectrik.ui.Models.Cliente>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.distrito.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDocumento.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellidoPaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellidoMaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.documentoCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccionCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefonoCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.celularCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.correoCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.distrito.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDocumento.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellidoPaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellidoMaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.documentoCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccionCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefonoCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.celularCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.correoCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.codigo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.codigo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.codigo })
+        </td>
+    </tr>
+}
+
+</table>

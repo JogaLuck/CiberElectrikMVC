@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Inicio - CiberElectrik";
+}
+
+<main class="container mt-5">
+
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-primary">Bienvenido a CiberElectrik</h1>
+        <p class="lead">Sistema de gestión interna para empleados y recursos de la empresa tecnológica.</p>
+        <a class="btn btn-primary btn-lg mt-3" href="@Url.Action("Index", "Producto")">Ver productos disponibles &raquo;</a>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                    <i class="bi bi-person-badge-fill display-4 text-info mb-3"></i>
+                    <h4 class="card-title">Gestión de Empleados</h4>
+                    <p class="card-text">Administra el personal de la empresa, sus roles, accesos y perfiles.</p>
+                    <a href="@Url.Action("Index", "Empleado")" class="btn btn-outline-primary">Ver empleados</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                    <i class="bi bi-box-seam display-4 text-warning mb-3"></i>
+                    <h4 class="card-title">Inventario de Productos</h4>
+                    <p class="card-text">Consulta y organiza los productos electrónicos disponibles en stock.</p>
+                    <a href="@Url.Action("Index", "Producto")" class="btn btn-outline-warning">Ir al inventario</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                    <i class="bi bi-receipt-cutoff display-4 text-success mb-3"></i>
+                    <h4 class="card-title">Pedidos y Tickets</h4>
+                    <p class="card-text">Gestiona tickets, ventas y detalles de pedidos realizados por los clientes.</p>
+                    <a href="@Url.Action("Index", "TicketPedido")" class="btn btn-outline-success">Gestionar pedidos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
