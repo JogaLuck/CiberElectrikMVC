@@ -20,7 +20,7 @@ Proyecto ASP.NET MVC 5 desarrollado con Visual Studio 2022 para la gestión de p
 - Entity Framework 6
 - Bootstrap 5 (Frontend)
 - Razor Views
-- SQL Server (conexión configurada a AlwaysData)
+- SQL Server (conexión configurada a Somee)
 
 ---
 
@@ -92,7 +92,7 @@ git clone https://github.com/JogaLuck/CiberElectrikMVC.git
 
 ## 🌐 Demo Online
 
-> Puedes alojar la base de datos en [AlwaysData](https://alwaysdata.com) y desplegar el frontend en servicios como Render, Azure o Netlify (si lo conviertes en Web API + frontend SPA).
+> Puedes alojar la base de datos en [Somee]([https://www.somee.com/]) y desplegar el frontend en servicios como Render, Azure o Netlify (si lo conviertes en Web API + frontend SPA).
 
 ---
 
