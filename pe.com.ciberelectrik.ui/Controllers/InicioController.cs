@@ -16,7 +16,7 @@ namespace pe.com.ciberelectrik.ui.Controllers
         [HttpPost]
         public ActionResult Index(string usuario, string clave)
         {
-            if (usuario == "mhuapalla" && clave == "123456")
+            if (usuario == "admin" && clave == "admin")
             {
                 return RedirectToAction("Index", "Home");
 
